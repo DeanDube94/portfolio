@@ -3,7 +3,7 @@ Dean's Portfolio Website
 Welcome to my personal portfolio website! This site showcases my background, skills, and collaborative work in data analytics, web development, and AI.
 
  Live Website
-[View Portfolio](https://deandube94.github.io/dean-portfolio-website/)
+[View Portfolio]([https://deandube94.github.io/dean-portfolio-website/)](http://localhost:63342/PythonProject/index.html?_ijt=pdj1uajspuju0c3jr84lkgo2lp#certificates)
 
  Sections Included
 
