@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dean - Data Analyst Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <!-- Fonts & Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(135deg, #cbd5e1 0%, #f1f5f9 100%);
+    }
+    section.card {
+      background: white;
+      background-color: rgba(255 255 255 / 0.9);
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      cursor: pointer;
+    }
+    h2.section-title {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2563eb; /* blue-600 */
+      cursor: pointer;
+    }
+    h2.section-title::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      left: 0;
+      bottom: -4px;
+      background: #2563eb;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    h2.section-title:hover::after {
+      width: 100%;
+    }
+
+    /* Animation styles */
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-slide.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hidden-content {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body class="dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed w-full bg-white dark:bg-gray-800 shadow z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-2xl font-bold text-indigo-600">Dean</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">About Me</a>
+          <a href="#resume" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Resume</a>
+          <a href="#projects" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Collaborations</a>
+          <a href="#hackathons" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Hackathons</a>
+          <a href="#certificates" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Certificates</a>
+          <a href="#skills" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Skills</a>
+          <a href="#contact" class="hover:text-indigo-400 dark:hover:text-indigo-300 transition">Contact</a>
+        </div>
+        <button id="dark-toggle" class="ml-4 bg-indigo-100 dark:bg-indigo-700 text-indigo-700 dark:text-indigo-100 px-4 py-2 rounded hover:bg-indigo-200 dark:hover:bg-indigo-600 transition">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer -->
+  <div class="h-16"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-6">
+
+    <section id="about" class="card fade-slide">
+      <h2 class="section-title">About Me</h2>
+      <div class="hidden-content">
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I am an aspiring data analyst with a strong passion for turning data into insights. I am a BRICS International Skills Competition – Data and Visualization Bronze Medalist. I enjoy public speaking and have a growing interest in digital policy making.
+        </p>
+      </div>
+    </section>
+
+    <section id="resume" class="card fade-slide">
+      <h2 class="section-title">Resume</h2>
+      <div class="hidden-content">
+        <p class="mb-6 text-gray-700 dark:text-gray-300">You can view or download my resume below:</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="Dean_Resume.pdf" target="_blank" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded shadow hover:bg-indigo-700 transition">View Resume</a>
+          <a href="Dean_Resume.pdf" download class="inline-block bg-indigo-400 text-white px-6 py-3 rounded shadow hover:bg-indigo-500 transition">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card fade-slide">
+      <h2 class="section-title">Collaborations</h2>
+      <div class="hidden-content">
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I've worked on various group projects including:<br>
+          • A <strong>Computer Networks</strong> project involving secure communication and data routing. View it here: <a href="https://github.com/DeanDube94" target="_blank" class="text-indigo-600 dark:text-indigo-400 underline">GitHub Repo</a>.<br>
+          • A collaborative <strong>Emergency Services App</strong> designed to assist students on campus during medical or safety emergencies.
+        </p>
+      </div>
+    </section>
+
+    <section id="hackathons" class="card fade-slide">
+      <h2 class="section-title">Hackathons</h2>
+      <div class="hidden-content">
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I've participated in several hackathons including a <strong>Web Development Hackathon</strong>, where I built responsive and accessible pages in a team setting. These events helped me develop solutions under time constraints while working collaboratively.
+        </p>
+      </div>
+    </section>
+
+    <section id="certificates" class="card fade-slide">
+      <h2 class="section-title">Certificates</h2>
+      <div class="hidden-content">
+        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+          <li>Python Bootcamp Certificate</li>
+          <li>Artificial Intelligence Bootcamp Certificate</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="card fade-slide">
+      <h2 class="section-title">Skills</h2>
+      <div class="hidden-content">
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 list-disc list-inside text-gray-700 dark:text-gray-300">
+          <li>Python for Data Analytics</li>
+          <li>Matplotlib</li>
+          <li>Tableau</li>
+          <li>Data Visualization</li>
+          <li>Public Speaking</li>
+          <li>Digital Policy Research</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="card fade-slide">
+      <h2 class="section-title">Contact</h2>
+      <div class="hidden-content">
+        <p>You can reach me via:</p>
+        <ul class="mt-3 space-y-2 text-indigo-700 dark:text-indigo-300 font-medium">
+          <li>Email: <a href="mailto:dubedeann@gmail.com" class="hover:underline">dubedeann@gmail.com</a></li>
+          <li>Cellphone: <a href="tel:+27732245025" class="hover:underline">+27 732 245 025</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/dean-dube-6b1922278/" target="_blank" class="hover:underline">linkedin.com/in/dean-dube</a></li>
+          <li>GitHub: <a href="https://github.com/DeanDube94" target="_blank" class="hover:underline">github.com/DeanDube94</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-6 border-t border-indigo-300 dark:border-indigo-700 text-indigo-700 dark:text-indigo-300">
+    &copy; 2025 Dean. All rights reserved.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('dark-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.fade-slide');
+    const observerOptions = { threshold: 0.1 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Collapsible sections content toggle on title click
+    document.querySelectorAll('.section-title').forEach(title => {
+      title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
